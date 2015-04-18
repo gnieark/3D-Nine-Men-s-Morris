@@ -1,3 +1,13 @@
+/*
+* 3D nine mens'moris
+* By Gnieark https://blog-du-grouik.tinad.fr
+*
+* github: https://github.com/gnieark/3D-Nine-Men-s-Morris
+*
+* License GNU-GPL V3
+*/
+
+
 checkerRadius=9;
 checkerHoleRadius=7;
 
@@ -22,8 +32,7 @@ module checkerCube(ecartement =25){
         for(z=[-1 * ecartement,0, ecartement]){
            for(y=[-1 * ecartement,0, ecartement]){
                for(x=[-1 * ecartement,0, ecartement]){
-                   if ((x==0) && (y==0) && (z==0)){
-                    
+                   if ((x==0) && (y==0) && (z==0)){                    
                    }else{
                       translate([x,y,z]) checkerbase(); 
                    }
@@ -32,7 +41,7 @@ module checkerCube(ecartement =25){
         }
 }
 
-module checkerCubeLiens(ecartement =25){
+module checkerCubeLiens(ecartement=25){
     hgCube= (ecartement *2) + checkerRadius;
     liCube= (ecartement *2) - checkerRadius;
     for(z=[-1 * ecartement,0, ecartement]){
